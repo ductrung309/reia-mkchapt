@@ -1,0 +1,33 @@
+{
+  "name": "reia-mkchapt",
+  "version": "1.0.0",
+  "description": "chi la toi muon lam gi do truoc khi toi tro lai vien",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ./BackE/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ductrung309/reia-mkchapt.git"
+  },
+  "author": "ductrung309",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ductrung309/reia-mkchapt/issues"
+  },
+  "homepage": "https://github.com/ductrung309/reia-mkchapt#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.1",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
