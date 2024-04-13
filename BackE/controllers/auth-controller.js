@@ -49,7 +49,7 @@ export const signup = async (req, res) => {
       res.status(400).json({ error: "Invalid user data!" });
     }
   } catch (error) {
-    console.log("Error log", error.message);
+    console.log("Error signin", error.message);
     res.status(500).json({ error: "Server error" });
   }
 };
@@ -62,7 +62,7 @@ export const login = async (req, res) => {
     const user = await User.findOne({ username });
     const isPasswordcorrect = await bcrypt.compare(
       password,
-      user?.password || ""
+      user.password || ""
     );
     if (!user || isPasswordcorrect) {
       return res.status(400).json({ error: "Invalid username or password!" });
@@ -79,7 +79,17 @@ export const login = async (req, res) => {
       avatar: user.avatar,
     });
   } catch (error) {
-    console.log("Error log", error.message);
+    console.log("Error login", error.message);
+    res.status(500).json({ error: "Server error" });
+  }
+};
+
+export const logout = async (req, res) => {
+  try {
+    res.cookie("jwt", "", { maxAge: 0 });
+    res.status(200).json({ message: "Logout successfully" });
+  } catch (error) {
+    console.log("Error logout", error.message);
     res.status(500).json({ error: "Server error" });
   }
 };
