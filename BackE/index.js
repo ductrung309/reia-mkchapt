@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 import authRouter from "./routes/auth-routes.js";
 import connectMongoDB from "./db/mongodb-connect.js";
 
+dotenv.config();
+
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-dotenv.config();
 
 app.use(express.json());
 

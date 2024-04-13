@@ -1,4 +1,4 @@
-import mongoose, { Types } from "mongoose";
+import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
   fullname: {
@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
   gender: {
     type: String,
     required: true,
-    enum: ["Nam", "Nữ"],
+    enum: ["Nam", "Nu"],
   },
   avatar: {
     type: String,
