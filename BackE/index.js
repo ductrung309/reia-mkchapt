@@ -4,6 +4,7 @@ import cookies from "cookie-parser";
 
 import authRouter from "./routes/auth-routes.js";
 import messageRouter from "./routes/message-routes.js";
+import userRouter from "./routes/user-routes.js";
 import connectMongoDB from "./db/mongodb-connect.js";
 
 dotenv.config();
@@ -16,6 +17,7 @@ app.use(cookies());
 
 app.use("/auth", authRouter);
 app.use("/inbox", messageRouter);
+app.use("/user", userRouter);
 
 app.get("/", (req, res) => {
   res.send("Trung đẹp trai!!!");
