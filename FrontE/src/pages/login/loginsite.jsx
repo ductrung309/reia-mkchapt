@@ -3,8 +3,8 @@ const Login = () => {
     <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
       <div className="w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-85">
         <h1 className="text-3x1 font-semibold text-center text-gray-300">
-          Đăng
-          <span className="text-blue-500"> Nhập</span>
+          Tròn
+          <span className="text-blue-500"> dangiuwa</span>
         </h1>
 
         <form>
@@ -37,7 +37,9 @@ const Login = () => {
             {"Không"} có tài khoản?
           </a>
 
-          <button className="btn btn-block btn-sm mt-2">Đăng nhập</button>
+          <div>
+            <button className="btn btn-block btn-sm mt-2">Đăng nhập</button>
+          </div>
         </form>
       </div>
     </div>
