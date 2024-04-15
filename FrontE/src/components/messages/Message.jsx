@@ -3,7 +3,7 @@ const Message = () => {
     <div className="chat chat-end">
       <div className="chat-image avatar">
         <div className="w-10 rounded-full">
-          <img alt="bubble component" src="../../../public/background.png" />
+          <img alt="bubble component" src="/background.png" />
         </div>
       </div>
       <div className={`chat-bubble text-white bg-blue-500`}>Hi! Wtf</div>

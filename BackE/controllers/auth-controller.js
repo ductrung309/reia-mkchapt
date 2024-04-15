@@ -4,10 +4,10 @@ import genTokenAndSetCookie from "../UT/genToken.js";
 
 export const signup = async (req, res) => {
   try {
-    const { fullname, username, password, confirmPassword, gender } = req.body;
+    const { fullname, username, password, confirmpassword, gender } = req.body;
 
     //Kiểm tra tính hợp lệ của mật khẩu
-    if (password !== confirmPassword) {
+    if (password !== confirmpassword) {
       return res.status(400).json({ error: "Password do not match!!" });
     }
 
